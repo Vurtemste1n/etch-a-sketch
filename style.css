@@ -1,0 +1,19 @@
+.row {
+    flex: auto;
+}
+.container {
+    display: flex;
+    width: 500px;
+    height: 500px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+.row:hover {
+    background-color: black;
+}
+.color {
+    background-color: black;
+}
