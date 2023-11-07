@@ -9,11 +9,12 @@ function toBuiltGrid(gridSize) {
       row.classList.add("row");
       row.addEventListener("mouseover", () => {
         row.classList.add("color");
+        row.style.opacity -= "-0.1";
       });
     }
   }
 }
-function gridSizePromt() {
+function gridSizePrompt() {
   let size;
   let userChoice = prompt("Enter desirable grid size: ");
   if (Number(userChoice) <= 100) {
@@ -25,9 +26,10 @@ const container = document.querySelector(".container");
 const gridSizeButton = document.querySelector(".grid-size");
 let gridSize;
 gridSizeButton.addEventListener("click", () => {
-  gridSize = gridSizePromt();
+  container.textContent = "";
+  gridSize = gridSizePrompt();
   toBuiltGrid(gridSize);
 });
-container.addEventListener("click", () => {
+window.addEventListener("load", () => {
   toBuiltGrid(16);
 });
